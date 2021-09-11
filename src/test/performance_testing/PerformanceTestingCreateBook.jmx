@@ -7,7 +7,13 @@
       <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
       <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-        <collectionProp name="Arguments.arguments"/>
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="isbn" elementType="Argument">
+            <stringProp name="Argument.name">isbn</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
       </elementProp>
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
@@ -33,9 +39,10 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-	&quot;title&quot; : &quot;test&quot;,&#xd;
-	&quot;author&quot; : &quot;test&quot;,&#xd;
-	&quot;genre&quot; : &quot;test&quot;,&#xd;
+	&quot;isbn&quot; : &quot;${__counter(FALSE,)}&quot;,&#xd;
+	&quot;title&quot; : &quot;testsabc&quot;,&#xd;
+	&quot;author&quot; : &quot;testsabc&quot;,&#xd;
+	&quot;genre&quot; : &quot;testsabc&quot;,&#xd;
 	&quot;price&quot; : 0.0	&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
@@ -114,7 +121,7 @@
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">C:\Users\mimi_\Desktop\Seminarska SKIT\performance testing\create_book\load_test_create_book_report.csv</stringProp>
+          <stringProp name="filename">C:\Users\mimi_\Documents\GitHub\books_rest_api_testing\src\main\resources\performance_testing\create_book\load_test_create_book_report.csv</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>
